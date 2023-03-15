@@ -1,0 +1,41 @@
+<div class="container p-5">
+    <div class="row">
+        <div class="col-6 border border-light rounded p-5 shadow" *ngIf="formulario">
+            <h6>{{tituloFormulario}}</h6>
+            <hr/>
+
+            <form [formGroup]="formulario">
+                <div class="form-group">
+                    <label>nomeDespesa</label>
+                    <input type="text" class="form-control form-control-sm" formControlName="nomeDespesa"/>
+                </div>
+
+                <div class="form-group">
+                    <label>vlrDespesa</label>
+                    <input type="text" class="form-control form-control-sm" formControlName="vlrDespesa"/>
+                </div>
+
+                <div class="form-group">
+                    <label>dtDespesa</label>
+                    <input type="text" class="form-control form-control-sm" formControlName="dtDespesa"/>
+                </div>
+
+                <div class="form-group">
+                    <label>dtVencimento</label>
+                    <input type="text" class="form-control form-control-sm" formControlName="dtVencimento"/>
+                </div>
+
+                <div class="container">
+                    <div class="row">
+                        <div>
+                            <button type="submit" class="btn btn-sm btn-outline-secondary" (click)="EnviarFormulario()">Salvar</button>
+                        </div>
+                        <div class="pl-1">
+                            <button type="button" class="btn btn-sm btn-light">Voltar</button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
